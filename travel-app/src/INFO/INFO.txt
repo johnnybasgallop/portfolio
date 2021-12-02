@@ -1,0 +1,17 @@
+.How this application was built:
+
+(should probably learn Axios and material-ui better before attempting to rebuild this,)
+
+installs: material-ui, bootstrap, google-maps-react, axios and a few more (TBC)
+
+First we setup the basic layout sections of everything in the App.js: This meant all the styles from the material-ui files and then we put the Header, List and Map into their individual sections. This provided a good skeleton for us to work with. so we can attack one section at a time.
+
+Then we Worked on the Header, Which was pretty basic. It was just some Material-ui imports for styling and some basic JSX to make a simple banner at the top of the page with a search bar in the top right.
+
+Next we worked on the Map. Basically using google-maps-react to get the map to show up. and just gave it all the parameters/props it needed and some placeholder data to start so we could get it up and running (also i set up my own API key for it obviously)
+
+Then we worked on the List. In the list we applied some basic selects and options using the Material-ui imports to make it easier. and the options/selects were for the Type and the Rating. e.g. Restaurants over 3.5stars. Then we made some dummy data and mapped over it so show the dummy data in the list section, just to double check that everything was working.
+
+ and thats how the static version was Built...
+
+ Now to make it dynamic: 
