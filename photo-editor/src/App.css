@@ -1,0 +1,132 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  
+}
+
+.container {
+  display:grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+  "nav nav sidebar"
+  "upload image sidebar"
+  "slider slider sidebar";
+  
+  height: 100vh;
+  width:100vw;
+  background-color: lightcoral;
+}
+
+.nav {
+  grid-area: nav;
+  text-align: center;
+  font-weight: bold;
+  background-color: lightcoral;
+  padding: 1rem;
+  font-size: 2rem;;
+  /* margin-bottom: 1rem; */
+
+}
+
+.file-container {
+  grid-area: upload;
+  display: grid;
+  align-items: center;
+  background-color: lightcoral;
+  width: 10vw;
+}
+
+.input-hide {
+  visibility: hidden;
+  /* display: none; */
+  height: 100%;
+}
+
+.plus {
+  grid-area: upload;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+
+  font-size: 5rem;
+  font-weight: bold;
+  background-color:lightcoral;
+  height: 10rem;
+  width: 10vw;
+
+}
+
+.plus:hover {
+  background-color: rgb(228, 53, 53);
+}
+
+.main-image {
+  grid-area: image;
+  background-color: lightcoral;
+  height: 70vh;
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+  /* margin-top: 1rem; */
+
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: lightcoral;
+  border-left: 1px solid rgb(228, 53, 53);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.sidebar-item {
+  cursor:pointer;
+  border: none;
+  outline: none;
+  background-color: lightcoral;
+  padding: 1rem;
+  position: relative;
+  transition: background-color 150ms;
+  font-size: 1.5rem;
+}
+
+.sidebar-item:hover, .sidebar-item:focus {
+  background-color: rgb(228, 53, 53);
+}
+
+.sidebar-item.active {
+  background-color: rgb(228, 53, 53);;
+}
+
+.sidebar-item::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: 0;
+  height: 2px;
+  background-color: rgb(207, 44, 44);;
+}
+
+.sidebar-item:last-child::after {
+  display:none;
+}
+
+.slider-container {
+  grid-area: slider;
+  background-color: rgb(230, 74, 74);
+  margin-top: 0rem;
+  padding:2rem;
+}
+
+.slider {
+  width: 100%;
+  cursor: pointer;
+}
